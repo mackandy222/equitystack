@@ -1,0 +1,39 @@
+{
+  "name": "equitystack",
+  "version": "0.1.0",
+  "description": "Two-sided marketplace connecting early-stage startups with executives willing to work for equity. AI-powered matching, vesting, legal agreements, and cap table management.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/server.ts",
+    "build": "bun build src/server.ts --outdir dist --target bun",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "db:migrate": "bun run scripts/migrate.ts",
+    "db:seed": "bun run scripts/seed.ts",
+    "lint": "bunx biome check src/",
+    "format": "bunx biome format --write src/"
+  },
+  "dependencies": {
+    "hono": "^4.7.0",
+    "@anthropic-ai/sdk": "^0.78.0",
+    "drizzle-orm": "^0.38.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "drizzle-kit": "^0.30.0"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "keywords": [
+    "equity",
+    "marketplace",
+    "startups",
+    "fractional-executives",
+    "vesting",
+    "ai-matching",
+    "cap-table"
+  ]
+}
